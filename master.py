@@ -1,3 +1,5 @@
+#THE PURPOSE OF THIS PROJECT IS ONLY EXPERIMENTAL! DON'T USE IT!
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
