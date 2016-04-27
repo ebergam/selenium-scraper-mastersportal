@@ -23,19 +23,19 @@ for x in range(0, 66):
 	for item in containers:
 		names = driver.find_elements_by_xpath("//div[@id='StudySearchResultsStudies']/div/h3/a")
 		for item in names:
-		    list_of_names.append(item.text.encode('utf-8') + ' ')
+		    list_of_names.append(item.text.encode('utf-8'))
 
 		places = driver.find_elements_by_xpath("//*[@id='StudySearchResultsStudies']/div/div[2]/div/ul[2]/li")
 		for item in places:
-		    list_of_places.append(item.text.encode('utf-8') + ' ')
+		    list_of_places.append(item.text.encode('utf-8'))
 
 		unis = driver.find_elements_by_xpath("//div[@id='StudySearchResultsStudies']/div/div[2]/div/ul[1]/li/a")
 		for item in unis:
-		    list_of_unis.append(item.text.encode('utf-8') + ' ')
+		    list_of_unis.append(item.text.encode('utf-8'))
 
-		costs = driver.find_elements_by_xpath("//*[@id='FactsList']/li[2]/ul/li[1]/abbr")
+		costs = driver.find_elements_by_class_name("eea")
 		for item in costs:
-		    list_of_costs.append(item.text.encode('utf-8') + ' ')
+		    list_of_costs.append(item.text.encode('utf-8'))
 	 
 	scroll.send_keys(Keys.END)
 	time.sleep(1)
